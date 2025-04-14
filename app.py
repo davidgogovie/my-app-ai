@@ -58,13 +58,13 @@ def main():
     generate = st.sidebar.button("Generate Images")
     if generate:
         st.write("My first Generative AI App")
-        # with st.spinner("Generating images..."):
-        #     pipeline = load_model()
-        #     images = generate_images(
-        #         prompt, pipeline, num_images, guidance, steps, style
-        #     )
-        #     for im in images:
-        #         st.image(im)
+        with st.spinner("Generating images..."):
+            pipeline = load_model()
+            images = generate_images(
+                prompt, pipeline, num_images, guidance, steps, style
+            )
+            for im in images:
+                st.image(im)
 
 
 if __name__ == "__main__":
